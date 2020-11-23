@@ -19,6 +19,7 @@
       "typeorm-seeding": "^1.6.1"
    },
    "scripts": {
+      "dev": "node --inspect -r ts-node/register -r dotenv/config src/index.ts",
       "start": "node -r ts-node/register src/index.ts",
       "testConnection": "node -r dotenv/config src/scripts/testConnection.ts",
       "makeMigrations": "yarn orm migration:generate",
