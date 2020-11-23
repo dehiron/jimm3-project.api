@@ -15,6 +15,19 @@ const connect = async () => {
 
 
 connect().then((connection) => {
+  // GET = /api/mountain
+  const getAllMountain = async (req, res) => {
+    const id = req.params.id;
+    const allMountains = await connection
+        .getRepository(Mountain)
+        .createQueryBuilder("mountain")
+        // .innerJoinAndSelect("post.user","user")
+        // .where("mountain.id=:id")
+        // .setParameters({ id: userId})
+        .getMany();
+    console.log(allMountains)
+    res.json(allMountains);
+  };
   // GET = /api/mountain/:id
   const getMountain = async (req, res) => {
       const id = req.params.id;
@@ -65,6 +78,7 @@ connect().then((connection) => {
   routes.get("/", (req, res) => {
     return res.json({message: "hello, wolrd"});
   });
+  routes.get("/api/mountain",getAllMountain);
   routes.get("/api/mountain/:id",getMountain);
   routes.post("/api/mountain",createMountain);
   routes.patch("/api/mountain/:id",updateMountainInfo);
