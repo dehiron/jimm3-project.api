@@ -3,7 +3,7 @@ export = {
    host: "localhost",
    port: 5432,
    username: "hidehiroaya",
-   password: "Eddie26900",
+   password: "",
    database: "soloapi_db",
    synchronize: false, //true→falseに変えた
    logging: false,

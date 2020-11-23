@@ -23,4 +23,3 @@ export class UserController {
         await this.userRepository.remove(userToRemove);
     }
 
-}
