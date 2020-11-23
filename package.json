@@ -1,0 +1,31 @@
+{
+   "name": "solo_api",
+   "version": "0.0.1",
+   "description": "Awesome project developed with TypeORM.",
+   "devDependencies": {
+      "@types/faker": "^5.1.4",
+      "@types/node": "^8.0.29",
+      "ts-node": "3.3.0",
+      "typescript": "3.3.3333"
+   },
+   "dependencies": {
+      "body-parser": "^1.18.1",
+      "express": "^4.15.4",
+      "nodemon": "^2.0.6",
+      "pg": "^8.4.0",
+      "pg-promise": "^10.8.0",
+      "reflect-metadata": "^0.1.10",
+      "typeorm": "0.2.24",
+      "typeorm-seeding": "^1.6.1"
+   },
+   "scripts": {
+      "start": "node -r ts-node/register src/index.ts",
+      "testConnection": "node -r dotenv/config src/scripts/testConnection.ts",
+      "makeMigrations": "yarn orm migration:generate",
+      "makeMigrationsmodi": "ts-node ./node_modules/typeorm/cli.js --config src/ormconfig.ts migration:generate",
+      "migrate": "yarn orm migration:run",
+      "orm": "ts-node ./node_modules/typeorm/cli.js --config src/ormconfig.ts",
+      "seeder": "ts-node -r dotenv/config ./node_modules/typeorm-seeding/dist/cli.js",
+      "seed": "yarn seeder --configName src/ormconfig.ts seed"
+   }
+}

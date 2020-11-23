@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "name": "tsukuba-san",
+        "prefecture": "ibaraki",
+        "height": 894
+    },
+    {
+        "id": 2,
+        "name": "fuji-san",
+        "prefecture": "yamanashi",
+        "height": 3667
+    },
+    {
+        "id": 3,
+        "name": "myogi-san",
+        "prefecture": "gunma",
+        "height": 1103
+    },
+    {
+        "id": 4,
+        "name": "akagi-san",
+        "prefecture": "gunma",
+        "height": 1828
+    },
+    {
+        "id": 5,
+        "name": "hinata-yama",
+        "prefecture": "yamanashi",
+        "height": 1660
+    },
+    {
+        "id": 6,
+        "name": "myoko-san",
+        "prefecture": "niigata",
+        "height":2454
+    },
+    {
+        "id": 7,
+        "name": "aso-san",
+        "prefecture": "kumamoto",
+        "height":1592 
+    },
+    {
+        "id": 8,
+        "name": "bandai-san",
+        "prefecture": "fukushima",
+        "height": 1816
+    },
+    {
+        "id": 9,
+        "name": "iwate-san",
+        "prefecture": "aomori",
+        "height": 2038
+    },
+    {
+        "id": 10,
+        "name": "zao-san",
+        "prefecture": "miyagi",
+        "height": 1841
+    }
+]
