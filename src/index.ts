@@ -43,7 +43,6 @@ connect().then((connection) => {
   };
   //POST - /api/mountain/
   const createMountain = async (req, res) => {
-    const id = req.params.id;
     const body = req.body;
     const allMountains = await connection
         .getRepository(Mountain)
@@ -53,9 +52,8 @@ connect().then((connection) => {
     newMountain.name = body.name;
     newMountain.prefecture = body.prefecture;
     newMountain.height = body.height;
-    console.log(allMountains)
-    // await connection.getRepository(Mountain).save(newMountain)
-    res.status(201).json(allMountains)
+    await connection.getRepository(Mountain).save(newMountain)
+    res.status(201).json(newMountain)
   }
   //PATCH - /api/mountain/:id
   const updateMountainInfo = async (req, res) => {
